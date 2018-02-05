@@ -1,0 +1,14 @@
+.mui-pull-top-pocket{
+	background: red;
+}
+.tablediv{
+	background-color: white!important;
+}
+.tablediv li{
+	border-bottom: none !important;
+	border-right: none !important;
+}
+.mui-table-view:before{
+	height: 0px;;
+}
+

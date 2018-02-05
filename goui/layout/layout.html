@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<nav id="bar" class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item mui-active" href="content.html" data-id="main">
+		        <span class="mui-icon mui-icon-home"></span>
+		        <span class="mui-tab-label">首页</span>
+		    </a>
+		    <a class="mui-tab-item" href="list.html" data-id="message">
+		        <span class="mui-icon mui-icon-phone"></span>
+		        <span class="mui-tab-label">电话</span>
+		    </a>
+		    <a class="mui-tab-item" href="pullrefresh_main.html" data-id="contact">
+		        <span class="mui-icon mui-icon-email"></span>
+		        <span class="mui-tab-label">邮件</span>
+		    </a>
+		    <a class="mui-tab-item" href="pullrefresh_sub.html" data-id="setting">
+		        <span class="mui-icon mui-icon-gear"></span>
+		        <span class="mui-tab-label">设置</span>
+		    </a>
+		</nav>
+		<div class="mui-content">
+		    
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				 preloadPages:[{
+			      url:'content.html',
+			      id:'content',
+			      styles:{
+			        top:'0px',//mui标题栏默认高度为45px
+			        bottom:'50px'//默认为0px，可不定义
+			      }
+			    }]
+			});
+            mui.plusReady(function() {
+                var self = plus.webview.currentWebview();
+                var current = '';
+                var styles = {
+                    top: '0',
+                    bottom: '50px'
+                };
+                var tabsConfig = {
+                    main: {
+                        url: 'content.html',
+                        styles: styles,
+                        default: true
+                    },
+                    message: {
+                        url: 'list.html',
+                        styles: styles
+                    },
+                    contact: {
+                        url: 'pullrefresh_main.html',
+                        styles: styles
+                    },
+                    setting: {
+                        url: 'pullrefresh_sub.html',
+                        styles: styles
+                    }
+                };
+                var tabs = {};
+                for (id in tabsConfig) {
+                    tabs[id] = plus.webview.create(tabsConfig[id].url, id, tabsConfig[id].styles);
+                    if (tabsConfig[id]['default']) {
+                        self.append(tabs[id]);
+                        current = id;
+                    }
+                }
+                mui('#bar').on('tap', 'a', function(e) {
+                    if (current == this.dataset.id) {
+                        return;
+                    }
+                    tabs[this.dataset.id].show();
+                    tabs[current].hide();
+                    current = this.dataset.id;
+                });
+            });
+            
+		</script>
+	</body>
+
+</html>

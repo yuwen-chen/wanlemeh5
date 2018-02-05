@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div class="mui-content" id="pullrefresh">
+		    <div id="slider" class="mui-slider" >
+		      <div class="mui-slider-group mui-slider-loop">
+		        <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+		        <div class="mui-slider-item mui-slider-item-duplicate">
+		          <a href="#">
+		            <img src="../img/1004.jpg">
+		          </a>
+		        </div>
+		        <!-- 第一张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="../img/1001.jpg">
+		          </a>
+		        </div>
+		        <!-- 第二张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="../img/1002.jpg">
+		          </a>
+		        </div>
+		        <!-- 第三张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="../img/1003.jpg">
+		          </a>
+		        </div>
+		        <!-- 第四张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="../img/1004.jpg">
+		          </a>
+		        </div>
+		        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+		        <div class="mui-slider-item mui-slider-item-duplicate">
+		          <a href="#">
+		            <img src="../img/1001.jpg">
+		          </a>
+		        </div>
+		      </div>
+		      <div class="mui-slider-indicator">
+		        <div class="mui-indicator mui-active"></div>
+		        <div class="mui-indicator"></div>
+		        <div class="mui-indicator"></div>
+		        <div class="mui-indicator"></div>
+		      </div>
+		    </div>
+		    <div>
+		    	<ul class="mui-table-view mui-grid-view mui-grid-9 tablediv">
+		    	<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    	    <a href="javascript:void(0)" onclick="detil()">
+		    	        <span class="mui-icon mui-icon-home"></span>
+		    	        <div class="mui-media-body">Home</div>
+		    	    </a>
+		    	</li>
+		    	<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    	    <a href="#">
+		    	        <span class="mui-icon mui-icon-email"><span class="mui-badge mui-badge-red">5</span></span>
+		    	        <div class="mui-media-body">Email</div>
+		    	    </a>
+		    	</li>
+		    	<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    	    <a href="#">
+		    	        <span class="mui-icon mui-icon-chatbubble"></span>
+		    	        <div class="mui-media-body">Chat</div>
+		    	    </a>
+		    	</li>
+		    	<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    	    <a href="#">
+		    	        <span class="mui-icon mui-icon-location"></span>
+		    	        <div class="mui-media-body">Location</div>
+		    	    </a>
+		    	</li>
+		    	<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    	    <a href="#">
+		    	        <span class="mui-icon mui-icon-search"></span>
+		    	        <div class="mui-media-body">Search</div>
+		    	    </a>
+		    	</li>
+		    	<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    	    <a href="#">
+		    	        <span class="mui-icon mui-icon-phone"></span>
+		    	        <div class="mui-media-body">Phone</div>
+		    	    </a>
+		    	</li>
+		    	<ul class="mui-table-view mui-grid-view tablediv">
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" src="../img/1001.jpg">
+		                <div class="mui-media-body">幸福就是可以一起睡觉</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" src="../img/1003.jpg">
+		                <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#"><img class="mui-media-object" src="../img/1002.jpg">
+		                <div class="mui-media-body">Color of SIP CBD</div></a></li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		            <a href="#">
+		                <img class="mui-media-object" src="../img/1004.jpg">
+		                <div class="mui-media-body">静静看这世界</div></a></li>
+		    </ul>
+		    	</ul>
+		    </div>
+		    <div>
+		    	
+
+		    </div>
+		    </div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			//获得slider插件对象
+			var gallery = mui('.mui-slider');
+			gallery.slider({
+				interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+			});
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+						contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容
+						callback: pullupRefresh
+					}
+				}
+			});
+			
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+					var table = document.body.querySelector('.mui-table-view');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for (var i = cells.length, len = i + 3; i < len; i++) {
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+						//下拉刷新，新纪录插到最前面；
+						//table.insertBefore(li, table.firstChild);
+					}
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1500);
+			}
+			var count = 0;
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				setTimeout(function() {
+					var isNoMore = ++count > 2;
+					if(isNoMore){
+						mui('#pullrefresh').pullRefresh().disablePullupToRefresh();
+						/*setTimeout(function(){
+						    mui('#pullrefresh').pullRefresh().disablePullupToRefresh();
+						}, 1000); // 显示“没有更多了”2s后执行：关闭向下加载更多功能（直接隐藏了“没有更多”）*/
+					}
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh(isNoMore); //参数为true代表没有更多数据了。
+					var table = document.body.querySelector('.mui-table-view');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for (var i = cells.length, len = i + 20; i < len; i++) {
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+						table.appendChild(li);
+					}
+				}, 1500);
+			}
+			if (mui.os.plus) {
+				mui.plusReady(function() {
+					setTimeout(function() {
+						mui('#pullrefresh').pullRefresh().pullupLoading();
+					}, 1000);
+
+				});
+			} else {
+				mui.ready(function() {
+					mui('#pullrefresh').pullRefresh().pullupLoading();
+				});
+			}
+
+			function detil() {
+				var titleNView = {
+					backgroundColor: '#FFFFFF', //导航栏背景色
+					titleText: '详情', //导航栏标题
+					titleColor: '#000000', //文字颜色
+					type: 'transparent', //透明渐变样式
+					autoBackButton: true, //自动绘制返回箭头
+					splitLine: { //底部分割线
+						//color:'#cccccc'
+					}
+				}
+				mui.openWindow({
+					url: 'detil.html',
+					id: 'detil',
+					styles: { // 窗口参数 参考5+规范中的WebviewStyle,也就是说WebviewStyle下的参数都可以在此设置
+						titleNView: titleNView
+					}
+				});
+			}
+		</script>
+	</body>
+
+</html>

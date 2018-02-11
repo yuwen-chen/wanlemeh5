@@ -1,82 +1,82 @@
 {
-	"index.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"css/style.css",
-			"layout/layout.html"
-		],
-		"refer": [
-			"layout/layout.html"
-		]
-	},
-	"layout/content.html": {
-		"resources": [
-			"layout/list.html",
-			"img/2.jpg",
-			"img/1.jpg",
-			"img/3.jpg",
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"fonts/mui.ttf",
-			"img/1001.jpg",
-			"img/1003.jpg",
-			"img/1002.jpg",
-			"img/1004.jpg",
-			"css/style.css"
-		],
-		"refer": [
-			"layout/list.html",
-			"layout/detil.html"
-		]
-	},
-	"layout/layout.html": {
-		"resources": [
-			"layout/content.html",
-			"fonts/mui.ttf",
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"layout/content.html",
-			"layout/list.html",
-			"layout/pullrefresh_sub.html",
-			"layout/pullrefresh_main.html"
-		]
-	},
-	"layout/list.html": {
-		"resources": [
-			"fonts/mui.ttf",
-			"js/mui.min.js",
-			"css/mui.min.css"
-		],
-		"refer": []
-	},
-	"layout/detil.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"img/1001.jpg",
-			"img/1003.jpg",
-			"img/1002.jpg",
-			"img/1004.jpg"
-		],
-		"refer": [
-			"layout/content.html"
-		]
-	},
-	"layout/pullrefresh_sub.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css"
-		]
-	},
-	"layout/pullrefresh_main.html": {
-		"resources": [
-			"layout/pullrefresh_sub.html"
-		],
-		"refer": [
-			"layout/pullrefresh_sub.html"
-		]
-	}
+  "index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "layout/layout.html"
+    ],
+    "refer": [
+      "layout/layout.html"
+    ]
+  },
+  "layout/content.html": {
+    "resources": [
+      "layout/list.html",
+      "img/2.jpg",
+      "img/1.jpg",
+      "img/3.jpg",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "img/1001.jpg",
+      "img/1003.jpg",
+      "img/1002.jpg",
+      "img/1004.jpg",
+      "css/style.css"
+    ],
+    "refer": [
+      "layout/list.html",
+      "layout/detil.html"
+    ]
+  },
+  "layout/layout.html": {
+    "resources": [
+      "layout/content.html",
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "layout/content.html",
+      "layout/list.html",
+      "layout/pullrefresh_sub.html",
+      "layout/pullrefresh_main.html"
+    ]
+  },
+  "layout/list.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "layout/detil.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "img/1001.jpg",
+      "img/1003.jpg",
+      "img/1002.jpg",
+      "img/1004.jpg"
+    ],
+    "refer": [
+      "layout/content.html"
+    ]
+  },
+  "layout/pullrefresh_sub.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ]
+  },
+  "layout/pullrefresh_main.html": {
+    "resources": [
+      "layout/pullrefresh_sub.html"
+    ],
+    "refer": [
+      "layout/pullrefresh_sub.html"
+    ]
+  }
 }

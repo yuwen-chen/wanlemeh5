@@ -1,0 +1,81 @@
+/* 内边距 */
+.pb10{padding-bottom: 10px}
+
+/* 中奖滚动样式 */
+.prizebox{/*background:#faca34;*//*margin:-3px 15px 10px;*/box-shadow:#d9d9d9 0 5px 20px 3px;color:#6a3906;}
+.pline{height:12px;border-radius:10px;background:#7d0000;}
+.ptitle{color:#6a3906;font-size:16px;padding:10px 15px;font-size:16px;}
+.pull-right{float: right!important;}
+.prizebox .ptitle .text-yellow{color:#6a3906;}
+.prizebox .ptitle .text-red{color:#ff0000;}
+.prizebox .prizelist{padding:0 15px;}
+.prizebox .prizelistwrap{height:180px;overflow:hidden;}
+.prizelist{font-size: 14px;line-height: 1.42857143;}
+.pt10lr10{padding:0px 0px 0;}
+
+.col-xs-4{
+	width: 33.33333333%;
+	float: left;
+}
+.col-xs-6 {
+	width: 50%;
+	float: left;
+}
+.col-xs-2 {
+	width: 16.66666667%;
+	float: left;
+}
+/**
+ * body
+ */
+.mui-content {
+	background-color: #FFFFFF;
+}
+
+.mui-grid-view.mui-grid-9 {
+background-color: #FFFFFF;
+}
+
+/* 十宫格 */
+.mui-col-xs-4{
+	width: 20%;
+}
+
+/*.mui-table-view {
+ background-color: #faca34;
+}*/
+.mui-grid-view.mui-grid-9 {
+	//background-color: #faca34;
+	border-top: 0px;
+	border-left: 0px;
+}
+
+.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+	border-right: 0px;
+	border-bottom: 0px;
+	//background-color: #faca34;
+}
+
+/**
+ * 滚动文字
+ */
+  .scroll-box{
+  width: 90%;
+   height: 20px;
+   margin: 10px auto;
+   overflow: hidden;
+ 
+  }
+  .scroll-box ul{
+   margin-top: 2px;
+   list-style: none;
+   width: 100%;
+   height: 100%;
+  }
+  .scroll-box ul li{
+   width: 100%;
+   height: 40px;
+   box-sizing: border-box;
+   line-height: 20px;
+   text-align: center;
+  }

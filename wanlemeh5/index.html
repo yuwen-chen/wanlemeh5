@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" charset="utf-8">
+      	mui.init({
+			subpages: [{
+				url: 'src/home.html', //子页面HTML地址，支持本地地址和网络地址
+				id: 'home', //子页面标志
+				styles: {
+					top:'44px',
+					bottom:'50px'
+				},
+				extras: {} //额外扩展参数
+			}]
+		});
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav <!--mui-bar-transparent-->">
+		<a class="mui-icon mui-icon-arrowdown mui-pull-left"></a>
+	    	<a class="mui-icon mui-icon-bars mui-pull-right"></a>
+		<div class="mui-input-row mui-search">
+	        <input type="search" class="mui-input-clear" placeholder="">
+	    </div>
+	    
+	    <!--<h1 class="mui-title">标题</h1>-->
+	    
+	</header>
+	<nav class="mui-bar mui-bar-tab">
+	    <a class="mui-tab-item mui-active">
+	        <span class="mui-icon mui-icon-home"></span>
+	        <span class="mui-tab-label">首页</span>
+	    </a>
+	    <a class="mui-tab-item">
+	        <span class="mui-icon mui-icon-phone"></span>
+	        <span class="mui-tab-label">电话</span>
+	    </a>
+	    <a class="mui-tab-item">
+	        <span class="mui-icon mui-icon-email"></span>
+	        <span class="mui-tab-label">邮件</span>
+	    </a>
+	    <a class="mui-tab-item">
+	        <span class="mui-icon mui-icon-gear"></span>
+	        <span class="mui-tab-label">设置</span>
+	    </a>
+	</nav>
+</body>
+</html>
